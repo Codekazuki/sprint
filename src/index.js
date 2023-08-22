@@ -1,36 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
+
+// const height = 34;
+const location = "Lagos";
+const quote = "lorem ipsium dato lumpsium";
+const author = "Adejare Adeboye";
+const img = "./assets/kazuki.jpg";
+const title = "Beyond expectation";
 
 function Starter() {
   return (
-    <>
-      <Name />
-      <Practice />
-      <Book />
-    </>
+    <section>
+      <Book title={title} img={img} location={location} />
+      <Book title={title} img={img} author={author} />
+      <Book title={title} img={img} quote={quote} />
+      <Book title={title} img={img} />
+    </section>
   );
 }
-const Name = () => <h1>Coachkazuki</h1>;
-const Practice = () => {
-  return <p>i am sprinting</p>;
-};
-const Book = () => {
+
+const Book = (props) => {
   return (
     <>
-      <Author />
-      <Imag />
-      <Title />
-      <Content />
-    </>
-  );
-};
-const Author = () => <h1>Adejare Adeboye</h1>;
-const Imag = () => <img src="" alt="Authors image" />;
-const Title = () => <h1>Beyond expectation</h1>;
-const Content = () => {
-  return (
-    <>
-      <h3>Lorem ipsum dolor sit amet.</h3>
+      <p>{props.author}</p>
+      <h1>{props.title}</h1>
+      <img src={props.img} alt={props.title} />
+      <h3>{props.location}</h3>
+      <p>{props.quote}</p>
     </>
   );
 };
