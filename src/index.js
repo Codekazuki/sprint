@@ -21,7 +21,7 @@ const thirdBook = {
   title: "zonal pastor",
   img: "./assets/kazuki.jpg",
   location: "Abia",
-  hobby: "fasting",
+  hobby: "fasting and paying",
 };
 
 function Starter() {

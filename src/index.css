@@ -12,7 +12,8 @@ body {
   grid-template-columns: repeat(auto auto auto);
 }
 .book {
-  padding: 5rem 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 2rem;
   width: 50vw;
   background: yellowgreen;
 }
