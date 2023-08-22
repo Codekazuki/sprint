@@ -36,6 +36,12 @@ function Starter() {
         img={secondBook.img}
         location={secondBook.location}
       />
+      <Book
+        author={thirdBook.author}
+        title={thirdBook.title}
+        img={thirdBook.img}
+        location={thirdBook.location}
+      />
     </section>
   );
 }
