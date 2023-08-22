@@ -9,10 +9,16 @@ const firstBook = {
   location: "Lagos",
 };
 const secondBook = {
-  author: "P Daniel",
+  author: "olawanle Daniel",
   title: "zonal pastor",
   img: "./assets/kazuki.jpg",
   location: "Ikole",
+};
+const thirdBook = {
+  author: "Uche Nwofor",
+  title: "zonal pastor",
+  img: "./assets/kazuki.jpg",
+  location: "Abia",
 };
 
 function Starter() {
