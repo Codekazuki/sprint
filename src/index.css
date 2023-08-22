@@ -7,3 +7,12 @@ body {
   background-color: aquamarine;
   color: blueviolet;
 }
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto auto auto);
+}
+.book {
+  padding: 5rem 0;
+  width: 50vw;
+  background: white;
+}

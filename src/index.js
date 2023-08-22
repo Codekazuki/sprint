@@ -2,33 +2,47 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-// const height = 34;
-const location = "Lagos";
-const quote = "lorem ipsium dato lumpsium";
-const author = "Adejare Adeboye";
-const img = "./assets/kazuki.jpg";
-const title = "Beyond expectation";
+const firstBook = {
+  author: "Joshua selman",
+  title: "area pastor",
+  img: "./assets/kazuki.jpg",
+  location: "Lagos",
+};
+const secondBook = {
+  author: "P Daniel",
+  title: "zonal pastor",
+  img: "./assets/kazuki.jpg",
+  location: "Ikole",
+};
 
 function Starter() {
   return (
-    <section>
-      <Book title={title} img={img} location={location} />
-      <Book title={title} img={img} author={author} />
-      <Book title={title} img={img} quote={quote} />
-      <Book title={title} img={img} />
+    <section className="card">
+      <Book
+        author={firstBook.author}
+        title={secondBook.title}
+        img={firstBook.img}
+        location={firstBook.location}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+        location={secondBook.location}
+      />
     </section>
   );
 }
 
 const Book = (props) => {
   return (
-    <>
+    <div className="book">
       <p>{props.author}</p>
       <h1>{props.title}</h1>
       <img src={props.img} alt={props.title} />
       <h3>{props.location}</h3>
       <p>{props.quote}</p>
-    </>
+    </div>
   );
 };
 
