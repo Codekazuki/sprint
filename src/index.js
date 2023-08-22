@@ -7,18 +7,21 @@ const firstBook = {
   title: "area pastor",
   img: "./assets/kazuki.jpg",
   location: "Lagos",
+  hobby: "praying",
 };
 const secondBook = {
   author: "olawanle Daniel",
   title: "zonal pastor",
   img: "./assets/kazuki.jpg",
   location: "Ikole",
+  hobby: "singing",
 };
 const thirdBook = {
   author: "Uche Nwofor",
   title: "zonal pastor",
   img: "./assets/kazuki.jpg",
   location: "Abia",
+  hobby: "fasting",
 };
 
 function Starter() {
@@ -29,18 +32,21 @@ function Starter() {
         title={secondBook.title}
         img={firstBook.img}
         location={firstBook.location}
+        hobby={firstBook.hobby}
       />
       <Book
         author={secondBook.author}
         title={secondBook.title}
         img={secondBook.img}
         location={secondBook.location}
+        hobby={secondBook.hobby}
       />
       <Book
         author={thirdBook.author}
         title={thirdBook.title}
         img={thirdBook.img}
         location={thirdBook.location}
+        hobby={thirdBook.hobby}
       />
     </section>
   );
@@ -54,6 +60,7 @@ const Book = (props) => {
       <img src={props.img} alt={props.title} />
       <h3>{props.location}</h3>
       <p>{props.quote}</p>
+      <p>{props.hobby}</p>
     </div>
   );
 };
