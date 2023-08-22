@@ -14,7 +14,7 @@ const secondBook = {
   title: "zonal pastor",
   img: "./assets/kazuki.jpg",
   location: "Ikole",
-  hobby: "singing",
+  hobby: "singing ",
 };
 const thirdBook = {
   author: "Uche Nwofor",
