@@ -1,19 +1,39 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
 
-import Hello from "./hello";
+function Starter() {
+  return (
+    <>
+      <Name />
+      <Practice />
+      <Book />
+    </>
+  );
+}
+const Name = () => <h1>Coachkazuki</h1>;
+const Practice = () => {
+  return <p>i am sprinting</p>;
+};
+const Book = () => {
+  return (
+    <>
+      <Author />
+      <Imag />
+      <Title />
+      <Content />
+    </>
+  );
+};
+const Author = () => <h1>Adejare Adeboye</h1>;
+const Imag = () => <img src="" alt="Authors image" />;
+const Title = () => <h1>Beyond expectation</h1>;
+const Content = () => {
+  return (
+    <>
+      <h3>Lorem ipsum dolor sit amet.</h3>
+    </>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-
-    <Hello />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+root.render(<Starter />);
