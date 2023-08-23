@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import Navbar from "./Navbar";
 
 const firstBook = {
   author: "Joshua selman",
@@ -19,7 +20,7 @@ const secondBook = {
 const thirdBook = {
   author: "Uche Nwofor",
   title: "zonal pastor",
-  img: "./assets/kazuki.jpg",
+  img: ".assets/kazuki.jpg",
   location: "Abia",
   hobby: "fasting and paying",
 };
@@ -28,29 +29,32 @@ const handleClick = () => {
 };
 function Starter() {
   return (
-    <section className="card">
-      <Book
-        author={firstBook.author}
-        title={secondBook.title}
-        img={firstBook.img}
-        location={firstBook.location}
-        hobby={firstBook.hobby}
-      />
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-        location={secondBook.location}
-        hobby={secondBook.hobby}
-      />
-      <Book
-        author={thirdBook.author}
-        title={thirdBook.title}
-        img={thirdBook.img}
-        location={thirdBook.location}
-        hobby={thirdBook.hobby}
-      />
-    </section>
+    <>
+      <section className="card">
+        <Book
+          author={firstBook.author}
+          title={firstBook.title}
+          img={firstBook.img}
+          location={firstBook.location}
+          hobby={firstBook.hobby}
+        />
+        <Book
+          author={secondBook.author}
+          title={secondBook.title}
+          img={secondBook.img}
+          location={secondBook.location}
+          hobby={secondBook.hobby}
+        />
+        <Book
+          author={thirdBook.author}
+          title={thirdBook.title}
+          img={thirdBook.img}
+          location={thirdBook.location}
+          hobby={thirdBook.hobby}
+        />
+      </section>
+      <Navbar />
+    </>
   );
 }
 
