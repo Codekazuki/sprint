@@ -9,11 +9,16 @@ body {
 }
 .card {
   display: grid;
-  grid-template-columns: repeat(auto auto auto);
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 .book {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 2rem;
-  width: 50vw;
   background: red;
+  border-radius: 4rem;
+}
+.book img {
+  height: 14rem;
+  width: 14rem;
 }

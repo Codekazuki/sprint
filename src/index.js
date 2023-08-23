@@ -23,7 +23,9 @@ const thirdBook = {
   location: "Abia",
   hobby: "fasting and paying",
 };
-
+const handleClick = () => {
+  alert("button is clicked");
+};
 function Starter() {
   return (
     <section className="card">
@@ -52,15 +54,16 @@ function Starter() {
   );
 }
 
-const Book = (props) => {
+const Book = ({ author, title, img, location, quote, hobby }) => {
   return (
     <div className="book">
-      <p>{props.author}</p>
-      <h1>{props.title}</h1>
-      <img src={props.img} alt={props.title} />
-      <h3>{props.location}</h3>
-      <p>{props.quote}</p>
-      <p>{props.hobby}</p>
+      <p>{author}</p>
+      <h1>{title}</h1>
+      <img src={img} alt={title} />
+      <h3>{location}</h3>
+      <p>{quote}</p>
+      <p>{hobby}</p>
+      <button onClick={handleClick}>click</button>
     </div>
   );
 };
