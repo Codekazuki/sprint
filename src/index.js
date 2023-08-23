@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Navbar from "./Navbar";
+import image from "./assets/kazuki.jpg";
 
 const firstBook = {
   author: "Joshua selman",
@@ -63,7 +64,7 @@ const Book = ({ author, title, img, location, quote, hobby }) => {
     <div className="book">
       <p>{author}</p>
       <h1>{title}</h1>
-      <img src={img} alt={title} />
+      <img src={image} alt={title} />
       <h3>{location}</h3>
       <p>{quote}</p>
       <p>{hobby}</p>
