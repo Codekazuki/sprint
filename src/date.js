@@ -1,4 +1,4 @@
-export const Data = [
+export const date = [
   {
     name: "Ade",
     id: 1,
@@ -12,4 +12,3 @@ export const Data = [
     id: 3,
   },
 ];
-export default Data;
