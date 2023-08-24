@@ -11,6 +11,15 @@ const Navbar = () => {
     setCount(count + 1);
   };
   const [people, setPeople] = React.useState(date);
+  const handleDeleteAll = () => {
+    setPeople([]);
+  };
+
+  const handleDelete = (id) => {
+    const newPeople = people.filter((person) => person.id !== id);
+    setPeople(newPeople);
+  };
+
   return (
     <>
       <section className="nav">
@@ -22,9 +31,17 @@ const Navbar = () => {
         {people.map((person) => {
           const { id, name } = person;
           console.log(people);
-          return <div key={id}>{name}</div>;
+          return (
+            <div key={id}>
+              <h1>{name}</h1>
+              <button type="button" onClick={() => handleDelete(id)}>
+                click me to delete
+              </button>
+            </div>
+          );
         })}
       </>
+      <button onClick={handleDeleteAll}>clear</button>
     </>
   );
 };
