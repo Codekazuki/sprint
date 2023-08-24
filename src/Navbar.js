@@ -1,5 +1,6 @@
 import "./index.css";
 import logo from "./assets/kazuki.jpg";
+import { data } from "./Data/Data.js";
 
 const Navbar = () => {
   return (
