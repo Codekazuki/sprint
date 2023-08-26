@@ -19,6 +19,10 @@ const Navbar = () => {
     const newPeople = people.filter((person) => person.id !== id);
     setPeople(newPeople);
   };
+  const [active, setActive] = useState(false);
+  const changeColor = () => {
+    setActive(!active);
+  };
 
   return (
     <>
@@ -36,6 +40,13 @@ const Navbar = () => {
               <h1>{name}</h1>
               <button type="button" onClick={() => handleDelete(id)}>
                 click me to delete
+              </button>
+              <button
+                onClick={changeColor}
+                style={{ color: active ? "red" : "green" }}
+              >
+                {" "}
+                change color
               </button>
             </div>
           );
