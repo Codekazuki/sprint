@@ -11,4 +11,16 @@ export const date = [
     name: "Ayo",
     id: 3,
   },
+  {
+    name: "Kehinde",
+    id: 4,
+  },
+  {
+    name: "Taye",
+    id: 5,
+  },
+  {
+    name: "Doyin",
+    id: 6,
+  },
 ];

@@ -41,18 +41,21 @@ const Navbar = () => {
               <button type="button" onClick={() => handleDelete(id)}>
                 click me to delete
               </button>
-              <button
-                onClick={changeColor}
-                style={{ color: active ? "red" : "green" }}
-              >
-                {" "}
-                change color
-              </button>
             </div>
           );
         })}
+        <button onClick={handleDeleteAll}>clear</button>
+        <div className="divv">
+          <button
+            className="change-color"
+            onClick={changeColor}
+            style={{ color: active ? "red" : "green" }}
+          >
+            {" "}
+            The colour would change when the button is clicked ...........
+          </button>
+        </div>
       </>
-      <button onClick={handleDeleteAll}>clear</button>
     </>
   );
 };
