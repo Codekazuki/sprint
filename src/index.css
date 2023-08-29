@@ -6,6 +6,7 @@
 body {
   background-color: aquamarine;
   color: blueviolet;
+  text-align: center;
 }
 .card {
   display: grid;
@@ -42,7 +43,9 @@ body {
   margin-bottom: 5rem;
 }
 .container {
+  max-width: 50vw;
   display: grid;
+  margin: auto;
   grid-template-columns: 200px 1fr 200px;
   grid-template-rows: 100px 50px auto;
   grid-gap: 20px;
