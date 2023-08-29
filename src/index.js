@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Navbar from "./Navbar";
 import image from "./assets/kazuki.jpg";
+import Boxes from "./Boxes";
 
 const firstBook = {
   author: "Joshua selman",
@@ -55,6 +56,7 @@ function Starter() {
         />
       </section>
       <Navbar />
+      <Boxes />
     </>
   );
 }

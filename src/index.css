@@ -41,3 +41,13 @@ body {
   margin: auto;
   margin-bottom: 5rem;
 }
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 100px 50px auto;
+  grid-gap: 20px;
+  background-color: red;
+}
+.item {
+  background-color: blue;
+}
