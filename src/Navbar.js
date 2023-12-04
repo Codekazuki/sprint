@@ -7,8 +7,11 @@ import { date } from "./date";
 
 const Navbar = () => {
   const [count, setCount] = useState(0);
-  const handleClick = () => {
+  const increaseClick = () => {
     setCount(count + 1);
+  };
+  const decreaseClick = () => {
+    setCount(count - 1);
   };
   const [people, setPeople] = React.useState(date);
   const handleDeleteAll = () => {
@@ -26,10 +29,11 @@ const Navbar = () => {
 
   return (
     <>
-      <section className="nav">
-        <img className="logo" src={logo} alt="here is it" />
+      <section className='nav'>
+        <img className='logo' src={logo} alt='here is it' />
         <p>you clicked {count} times</p>
-        <button onClick={handleClick}>hello</button>
+        <button onClick={increaseClick}>incraese</button>
+        <button onClick={decreaseClick}>decrease</button>
       </section>
       <>
         {people.map((person) => {
@@ -38,16 +42,16 @@ const Navbar = () => {
           return (
             <div key={id}>
               <h1>{name}</h1>
-              <button type="button" onClick={() => handleDelete(id)}>
+              <button type='button' onClick={() => handleDelete(id)}>
                 click me to delete
               </button>
             </div>
           );
         })}
         <button onClick={handleDeleteAll}>clear</button>
-        <div className="divv">
+        <div className='divv'>
           <button
-            className="change-color"
+            className='change-color'
             onClick={changeColor}
             style={{ color: active ? "red" : "green" }}
           >
