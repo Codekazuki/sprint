@@ -54,3 +54,14 @@ body {
 .item {
   background-color: blue;
 }
+.nav-scri {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-list-scri {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
