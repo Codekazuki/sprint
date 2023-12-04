@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+// import "./index.css";
 import Navbar from "./Navbar";
 import image from "./assets/kazuki.jpg";
 import Boxes from "./Boxes";
+import Sprint from "./Sprint";
 
 const firstBook = {
   author: "Joshua selman",
@@ -32,7 +33,7 @@ const handleClick = () => {
 function Starter() {
   return (
     <>
-      <section className="card">
+      <section className='card'>
         <Book
           author={firstBook.author}
           title={firstBook.title}
@@ -57,13 +58,14 @@ function Starter() {
       </section>
       <Navbar />
       <Boxes />
+      <Sprint />
     </>
   );
 }
 
 const Book = ({ author, title, img, location, quote, hobby }) => {
   return (
-    <div className="book">
+    <div className='book'>
       <p>{author}</p>
       <h1>{title}</h1>
       <img src={image} alt={title} />
