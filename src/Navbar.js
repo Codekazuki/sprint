@@ -1,11 +1,18 @@
 import React from "react";
 import "./index.css";
-import logo from "./assets/kazuki.jpg";
+import aworan from "./assets/rccg.png";
 
 const Navbar = () => {
   return (
     <>
-      <nav>navigation</nav>
+      <div className='nav-container'>
+        <img src={aworan} alt='' />
+        <ul className='nav-items'>
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
     </>
   );
 };

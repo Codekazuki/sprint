@@ -1,17 +1,8 @@
-import aworan from "./assets/rccg.png";
 import "./index.css";
 
 const Sprint = () => {
   return (
     <div>
-      <div className='nav-scri'>
-        <img src={aworan} alt='' height='24rem' width='24rem' />
-        <ul className='nav-list-scri'>
-          <li>Pricing</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </div>
       <h1>Fun fact about React</h1>
 
       <ul>
