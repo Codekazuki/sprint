@@ -23,5 +23,11 @@ body {
 }
 .nav-container img {
   padding-left: 8px;
-  width: 4rem;
+  width: 8rem;
+}
+.fact-header {
+  color: red;
+}
+.fact-items {
+  color: black;
 }
