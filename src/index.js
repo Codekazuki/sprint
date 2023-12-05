@@ -10,7 +10,7 @@ function Starter() {
   return (
     <>
       <Navbar />
-      {/* <Boxes /> */}
+      <Boxes />
       <Sprint />
     </>
   );

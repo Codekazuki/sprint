@@ -1,17 +1,33 @@
 import "./index.css";
+import { useState } from "react";
 
-const Boxes = () => {
+function Boxes() {
+  const [name, setName] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (name) {
+      document.getElementById(
+        "displayedName"
+      ).innerText = `You entered: ${name}`;
+    }
+  };
+
   return (
-    <div className="container">
-      <div className="item">1</div>
-      <div className="item">2</div>
-      <div className="item">3</div>
-      <div className="item">4</div>
-      <div className="item">5</div>
-      <div className="item">6</div>
-      <div className="item">7</div>
-      <div className="item">8</div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter your name:
+          <input
+            type='text'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <input type='submit' />
+      </form>
+      {name && <div id='displayedName'></div>}
     </div>
   );
-};
+}
 export default Boxes;

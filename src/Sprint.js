@@ -19,4 +19,5 @@ const Sprint = () => {
     </div>
   );
 };
+
 export default Sprint;
