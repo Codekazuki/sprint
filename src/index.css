@@ -3,37 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: aquamarine;
-}
-.nav-items {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-.nav-items li {
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 1rem;
-}
-.nav-container {
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
-}
-.nav-items li {
-  padding: 2rem;
-}
-.nav-container img {
-  padding-left: 8px;
-  width: 8rem;
-}
-.fact-header {
-  color: red;
-}
-.fact-items {
-  color: black;
-}
