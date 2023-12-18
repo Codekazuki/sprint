@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom/client";
 
-import { Pizza } from "./Pizza";
-
 const pizzaData = [
   {
     name: "Focaccia",
@@ -51,13 +49,47 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <img src='pizzas/funghi.jpg' alt='' />
-
-      <Pizza />
-      <h1>hello react!!!!!!!!!</h1>
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
+const Menu = () => {
+  return (
+    <div>
+      <h1>OUR MENU</h1>
+      <img src='pizzas/funghi.jpg' alt='pizza' height='20%' />
+      <h1>pizza</h1>
+    </div>
+  );
+};
+function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closedHour = 22;
+  if (hour >= openHour && hour <= closedHour) {
+    alert("we are open");
+  } else {
+    alert("we don close");
+  }
+  return (
+    <div>
+      <h1>
+        Today is {new Date().toLocaleDateString()}, and the time is
+        {new Date().toLocaleTimeString()} This is the footer
+      </h1>
+    </div>
+  );
+}
+function Header() {
+  return (
+    <div>
+      <h1>Alagbole Pizzas</h1>
+    </div>
+  );
+}
+
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
