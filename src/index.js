@@ -51,9 +51,9 @@ const pizzaData = [
 function App() {
   return (
     <div className='container'>
-      {/* <Header />
+      <Header />
       <Menu />
-      <Footer /> */}
+      <Footer />
       <Card />
     </div>
   );
@@ -62,29 +62,35 @@ const Menu = (props) => {
   return (
     <main className='menu'>
       <h2>OUR MENU</h2>
-      <Pizza
-        imageName='pizzas/funghi.jpg'
+      <ul className='pizzas'>
+        {pizzaData.map((pizza) => (
+          <Pizza pizzaObj={pizza} key={pizza.name} />
+        ))}
+      </ul>
+
+      {/* <Pizza
+        photoName='pizzas/funghi.jpg'
         ingredients='Tomato, mozarella, spinach, and ricotta cheese'
         name='Pizza'
         price={30}
       />
       <Pizza
         name='mamarita'
-        imageName='pizzas/focaccia.jpg'
+        photoName='pizzas/focaccia.jpg'
         ingredients='semo,and so so and so'
         price={20}
-      />
+      /> */}
     </main>
   );
 };
 function Pizza(props) {
   return (
     <div className='pizza'>
-      <img src={props.imageName} alt={props.name} />
+      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.price - props.price * 0.2}</span>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price - props.pizzaObj.price * 0.2}</span>
       </div>
     </div>
   );
