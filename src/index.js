@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom/client";
 import "./index.css";
+import Card from "./Card";
 
 const pizzaData = [
   {
@@ -50,9 +51,10 @@ const pizzaData = [
 function App() {
   return (
     <div className='container'>
-      <Header />
+      {/* <Header />
       <Menu />
-      <Footer />
+      <Footer /> */}
+      <Card />
     </div>
   );
 }
