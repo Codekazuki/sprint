@@ -64,13 +64,13 @@ const Menu = (props) => {
         imageName='pizzas/funghi.jpg'
         ingredients='Tomato, mozarella, spinach, and ricotta cheese'
         name='Pizza'
-        price='37'
+        price={30}
       />
       <Pizza
         name='mamarita'
         imageName='pizzas/focaccia.jpg'
         ingredients='semo,and so so and so'
-        price='10'
+        price={20}
       />
     </main>
   );
@@ -82,7 +82,7 @@ function Pizza(props) {
       <div>
         <h3>{props.name}</h3>
         <p>{props.ingredients}</p>
-        <span>{props.price}</span>
+        <span>{props.price - props.price * 0.2}</span>
       </div>
     </div>
   );
