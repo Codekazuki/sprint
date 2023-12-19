@@ -56,20 +56,34 @@ function App() {
     </div>
   );
 }
-const Menu = () => {
+const Menu = (props) => {
   return (
     <main className='menu'>
       <h2>OUR MENU</h2>
-      <Pizza />
+      <Pizza
+        imageName='pizzas/funghi.jpg'
+        ingredients='Tomato, mozarella, spinach, and ricotta cheese'
+        name='Pizza'
+        price='37'
+      />
+      <Pizza
+        name='mamarita'
+        imageName='pizzas/focaccia.jpg'
+        ingredients='semo,and so so and so'
+        price='10'
+      />
     </main>
   );
 };
-function Pizza() {
+function Pizza(props) {
   return (
-    <div>
-      <img src='pizzas/funghi.jpg' alt='pizza' height='20%' />
-      <h3>Pizza</h3>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+    <div className='pizza'>
+      <img src={props.imageName} alt={props.name} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.price}</span>
+      </div>
     </div>
   );
 }
