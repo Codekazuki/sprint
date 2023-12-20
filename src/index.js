@@ -59,14 +59,19 @@ function App() {
   );
 }
 const Menu = (props) => {
+  const pizza = pizzaData;
+  const numPizzas = pizza.length;
+
   return (
     <main className='menu'>
       <h2>OUR MENU</h2>
-      <ul className='pizzas'>
-        {pizzaData.map((pizza) => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
+      {numPizzas > 0 && (
+        <ul className='pizzas'>
+          {pizzaData.map((pizza) => (
+            <Pizza pizzaObj={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      )}
 
       {/* <Pizza
         photoName='pizzas/funghi.jpg'
