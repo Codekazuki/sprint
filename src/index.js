@@ -65,12 +65,14 @@ const Menu = (props) => {
   return (
     <main className='menu'>
       <h2>OUR MENU</h2>
-      {numPizzas > 0 && (
+      {numPizzas > 0 ? (
         <ul className='pizzas'>
           {pizzaData.map((pizza) => (
             <Pizza pizzaObj={pizza} key={pizza.name} />
           ))}
         </ul>
+      ) : (
+        <p>Our chef is currently sick sick</p>
       )}
 
       {/* <Pizza
@@ -103,21 +105,23 @@ function Pizza(props) {
 
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 0;
+  const openHour = 6;
   const closedHour = 22;
   const isOpen = hour >= openHour && hour <= closedHour;
 
   return (
     <footer className='footer'>
-      {isOpen && (
-        <div>
+      <div>
+        {isOpen ? (
           <p>
             We are open until {closedHour}:00 <br /> You may place your order
             now
           </p>
-        </div>
-      )}
-      <button className='btn'>order now</button>
+        ) : (
+          <p style={{ backgroundColor: "grey" }}> We are currently closed </p>
+        )}
+      </div>
+      <button className='btn order'>order now</button>
     </footer>
   );
 }

@@ -166,7 +166,11 @@ body {
 .footer {
   font-size: 1.4rem;
 }
-
+.footer div {
+  padding: 3rem;
+  display: grid;
+  place-items: center;
+}
 .order {
   display: flex;
   flex-direction: column;
