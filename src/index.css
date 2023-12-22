@@ -153,12 +153,15 @@ body {
 }
 
 .pizza.sold-out {
-  color: #888;
+  color: #933d3d;
+  /* background-color: greenyellow; */
+  border-radius: 8px;
 }
 
 .pizza.sold-out img {
   filter: grayscale();
   opacity: 0.8;
+  border-radius: 8px 0 0 0;
 }
 
 /* *************** */
