@@ -5,6 +5,13 @@ import Card from "./Card";
 
 const pizzaData = [
   {
+    name: "Pizza Prosciutto",
+    ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
+    price: 18,
+    photoName: "pizzas/prosciutto.jpg",
+    soldOut: true,
+  },
+  {
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,

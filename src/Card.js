@@ -4,12 +4,12 @@ const skillData = [
   {
     skill: "HTML+CSS",
     level: "expert",
-    color: "#009823",
+    color: "#116600",
   },
   {
     skill: "React",
     level: "beginner",
-    color: "#009900",
+    color: "#005699",
   },
   {
     skill: "Javascript",
@@ -29,7 +29,7 @@ const skillData = [
   {
     skill: "Svelte",
     level: "beginner",
-    color: "#343434",
+    color: "#008000",
   },
 ];
 const Card = () => {
