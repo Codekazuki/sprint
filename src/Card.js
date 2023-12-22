@@ -4,32 +4,32 @@ const skillData = [
   {
     skill: "HTML+CSS",
     level: "expert",
-    color: "#45t398",
+    color: "#009823",
   },
   {
     skill: "React",
     level: "beginner",
-    color: "#45t398",
+    color: "#009900",
   },
   {
     skill: "Javascript",
     level: "intermediate",
-    color: "#45t398",
+    color: "#282398",
   },
   {
     skill: "Saas",
     level: "intermediate",
-    color: "red",
+    color: "#e55555",
   },
   {
     skill: "GIT & GitHub",
     level: "intermediate",
-    color: "#45t398",
+    color: "#cf4b4b",
   },
   {
     skill: "Svelte",
     level: "beginner",
-    color: "#45t398",
+    color: "#343434",
   },
 ];
 const Card = () => {
@@ -78,7 +78,13 @@ function Skill({ skillObj }) {
   return (
     <button className='skill' style={{ backgroundColor: skillObj.color }}>
       <span>{skillObj.skill}</span>
-      <span>{skillObj.level}</span>
+      <span>{`${
+        skillObj.level === "beginner"
+          ? "💪"
+          : skillObj.level === "intermediate"
+          ? "😍"
+          : "👍"
+      }`}</span>
     </button>
   );
 }
