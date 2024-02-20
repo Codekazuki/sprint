@@ -60,10 +60,10 @@ function App() {
   return (
     <div className='container'>
       <Accordion />
-      <Header />
+      {/* <Header />
       <Menu />
       <Footer />
-      <Card />
+      <Card /> */}
     </div>
   );
 }
