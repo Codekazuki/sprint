@@ -5,7 +5,7 @@ import { footballQuestions } from "./data";
 const Accordion = () => {
   const [selected, setSelected] = useState(null);
   function handleSelection(getCurrentId) {
-    setSelected(getCurrentId);
+    setSelected(getCurrentId === selected ? null : getCurrentId);
   }
 
   return (
@@ -13,12 +13,14 @@ const Accordion = () => {
       <div className='accordion'>
         {footballQuestions && footballQuestions.length > 0 ? (
           footballQuestions.map((data) => (
-            <div>
+            <div className='item'>
               <div onClick={() => handleSelection(data.id)}>
-                <h1>{data.question}</h1>
+                <h1 className='title'>{data.question}</h1>
                 <span>+ </span>
               </div>
-              {selected === data.id ? <div>{data.answer}</div> : null}
+              {selected === data.id ? (
+                <div className='answer'>{data.answer}</div>
+              ) : null}
             </div>
           ))
         ) : (
