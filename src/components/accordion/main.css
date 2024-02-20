@@ -7,6 +7,17 @@
   width: 100vh;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+button {
+  margin: 3rem;
+  color: white;
+  font-weight: 900;
+  background-color: black;
+  padding: 12px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
 }
 .accordion {
   width: 500px;
@@ -29,4 +40,5 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bolder;
   font-style: italic;
+  margin: 3rem;
 }

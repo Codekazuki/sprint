@@ -10,12 +10,13 @@ const Accordion = () => {
 
   return (
     <section className='wrapper'>
+      <button>Enable multi selection</button>
       <div className='accordion'>
         {footballQuestions && footballQuestions.length > 0 ? (
           footballQuestions.map((data) => (
             <div className='item'>
-              <div onClick={() => handleSelection(data.id)}>
-                <h1 className='title'>{data.question}</h1>
+              <div className='title' onClick={() => handleSelection(data.id)}>
+                <h1>{data.question}</h1>
                 <span>+ </span>
               </div>
               {selected === data.id ? (
