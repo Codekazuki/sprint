@@ -20,4 +20,9 @@ export const footballQuestions = [
     question: "Who is the all-time top scorer in the UEFA Champions League?",
     answer: "Cristiano Ronaldo",
   },
+  {
+    id: 5,
+    question: "Who is Lyncrest Goat",
+    answer: "Morgan the Starboy",
+  },
 ];
