@@ -3,6 +3,7 @@ import ReactDom from "react-dom/client";
 import "./index.css";
 import Card from "./Card";
 import Accordion from "./components/accordion/Accordion";
+import Home from "./components/component/Home";
 
 const pizzaData = [
   {
@@ -59,6 +60,7 @@ const pizzaData = [
 function App() {
   return (
     <div className='container'>
+      <Home />
       <Accordion />
       {/* <Header />
       <Menu />
