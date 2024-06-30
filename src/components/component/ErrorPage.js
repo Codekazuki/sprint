@@ -7,7 +7,10 @@ function ErrorPage() {
   return (
     <div className='error-page'>
       <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
+      <p>
+        Sorry, an unexpected error has occurred.{" "}
+        <span>Please refresh the page or try again later</span>{" "}
+      </p>
       <p className='error-status'>{error.status}</p>
       <p className='error-status-text'>
         <i>{error.statusText}</i>
